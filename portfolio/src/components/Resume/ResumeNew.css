@@ -1,0 +1,22 @@
+.resume-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.pdf-container {
+  max-height: 80vh; /* Adjust the height as needed */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pdf-container .react-pdf__Page {
+  margin-bottom: 20px; /* Add some space between pages */
+}
+
+.react-pdf__Page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

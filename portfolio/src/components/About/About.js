@@ -5,10 +5,12 @@ import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import Toolstack from "./Toolstack";
+import Education from "./Education";
 
 function About() {
   return (
     <Container fluid className="about-section">
+        <Education />
       <Particle />
       <Container>
         <h1 className="project-heading" color="black">

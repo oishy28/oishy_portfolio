@@ -9,15 +9,37 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const scale = width > 786 ? 1.7 : 0.6;
+  const calculateScale = () => {
+    const { width, height } = dimensions;
+    // Adjust scale based on both width and height
+    if (width > 786 && height > 600) {
+      return 1.3;
+    } else if (width > 786) {
+      return 1.1;
+    } else if (height > 600) {
+      return 0.8;
+    } else {
+      return 0.6;
+    }
+  };
+
+  const scale = calculateScale();
 
   return (
     <div>
@@ -29,7 +51,6 @@ function ResumeNew() {
             href={pdf}
             target="_blank"
             style={{ maxWidth: "250px", marginBottom: "20px"}}
-
           >
             <AiOutlineDownload />
             &nbsp;Download CV

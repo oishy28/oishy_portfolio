@@ -22,7 +22,7 @@ function Home() {
 
               <h1 className="heading-name">
                 My name is <strong className="main-name"> OISHY FATEMA AKHAND</strong> . I am 3rd year student at <strong className="main-name"> Islamic University of Technology . I am 
-                <br/>also a</strong> 
+                <br/>also a</strong> <br />
               </h1>
 
               <div style={{ padding: 30, textAlign: "center" ,fontSize: 25 }}>
