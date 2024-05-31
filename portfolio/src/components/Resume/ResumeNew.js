@@ -1,76 +1,43 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Button, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import pdf from "../../Assets/../Assets/Oishy_Fatema_Akhand_cv.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import "./ResumeNew.css";
+import Resume from "./Resume_Oishy";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [dimensions, setDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+  const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
+    const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const calculateScale = () => {
-    const { width, height } = dimensions;
-    // Adjust scale based on both width and height
-    if (width > 786 && height > 600) {
-      return 1.7;
-    } else if (width > 786) {
-      return 1.1;
-    } else if (height > 600) {
-      return 0.8;
-    } else {
-      return 0.6;
-    }
-  };
-
-  const scale = calculateScale();
+  const scale = width > 786 ? 1.3 : 0.6;
 
   return (
     <div>
       <Container fluid className="resume-section">
         <Particle />
-        <Row style={{ justifyContent: "center", position: "relative", marginTop: "20px" }}>
+        <Row className="justify-content-center" style={{ position: "relative" }}>
           <Button
             variant="primary"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px", marginBottom: "20px"}}
+            style={{ maxWidth: "250px", marginBottom: "20px" }}
           >
             <AiOutlineDownload />
             &nbsp;Download CV
           </Button>
         </Row>
-
-        <Row className="d-flex justify-content-center">
-          <Col md={5} className="d-flex justify-content-center">
-            <Document file={pdf}>
-              <Page pageNumber={1} scale={scale} />
-            </Document>
-          </Col>
-        </Row>
-        <Row className="d-flex justify-content-center">
-          <Col md={5} className="d-flex justify-content-center">
-            <Document file={pdf}>
-              <Page pageNumber={2} scale={scale} />
-            </Document>
-          </Col>
-        </Row>
+        <Row><Resume /></Row>
+        
       </Container>
     </div>
   );
