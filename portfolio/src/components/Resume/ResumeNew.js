@@ -29,7 +29,7 @@ function ResumeNew() {
     const { width, height } = dimensions;
     // Adjust scale based on both width and height
     if (width > 786 && height > 600) {
-      return 1.3;
+      return 1.7;
     } else if (width > 786) {
       return 1.1;
     } else if (height > 600) {
@@ -58,9 +58,15 @@ function ResumeNew() {
         </Row>
 
         <Row className="d-flex justify-content-center">
-          <Col md={8} className="d-flex justify-content-center">
+          <Col md={5} className="d-flex justify-content-center">
             <Document file={pdf}>
               <Page pageNumber={1} scale={scale} />
+            </Document>
+          </Col>
+        </Row>
+        <Row className="d-flex justify-content-center">
+          <Col md={5} className="d-flex justify-content-center">
+            <Document file={pdf}>
               <Page pageNumber={2} scale={scale} />
             </Document>
           </Col>

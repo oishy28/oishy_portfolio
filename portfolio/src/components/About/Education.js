@@ -7,9 +7,9 @@ function Education() {
       <h1 className="project-heading">
         <strong className="purple">Education</strong>
       </h1>
-      <Row>
+      <Row >
         <Col md={4}>
-          <h3 className="education-title">Islamic University of Technology (IUT)</h3>
+          <h2 className="education-title">Islamic University of Technology (IUT)</h2>
           <p className="education-info">
             Boardbazar, Gazipur, Bangladesh<br/>
             Department: Computer Science and Engineering<br/>
@@ -20,7 +20,7 @@ function Education() {
           </p>
         </Col>
         <Col md={4}>
-          <h3 className="education-title">Rajshahi College</h3>
+          <h2 className="education-title">Rajshahi College</h2>
           <p className="education-info">
             Rajshahi, Bangladesh<br/>
             Higher Secondary (Science)<br/>
@@ -29,7 +29,7 @@ function Education() {
           </p>
         </Col>
         <Col md={4}>
-          <h3 className="education-title">Govt. PN Girls’ High School</h3>
+          <h2 className="education-title">Govt. PN Girls’ High School</h2>
           <p className="education-info">
             Rajshahi, Bangladesh<br/>
             Secondary School Certificate (Science)<br/>

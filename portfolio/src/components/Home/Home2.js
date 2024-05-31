@@ -4,10 +4,9 @@ import myImg from "../../Assets/avatar.jpeg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaFacebook, FaPhone, FaEnvelope } from "react-icons/fa";
 import "./styles.css";
 
 function Home2() {
@@ -16,16 +15,16 @@ function Home2() {
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "3.6em" , color: "#000"}}>
+            <h1 style={{ fontSize: "3.6em", color: "#000" }}>
               Learn More <span className="purple"> ABOUT </span> Me
             </h1>
-            <p className="home-about-body" style={{color: "#000"}}>
-              I’m currently enrolled in  undergraduate Software Engineering
-(SWE) program under Computer Science and Engineering (CSE) department.  
+            <p className="home-about-body" style={{ color: "#000" }}>
+              I’m currently enrolled in undergraduate Software Engineering
+              (SWE) program under Computer Science and Engineering (CSE) department.  
               <br />
               <i>
                 <b className="purple"> I specialize in Frontend
-development, boasting proficiency in HTML, CSS, JavaScript, and React. </b>
+                development, boasting proficiency in HTML, CSS, JavaScript, and React. </b>
               </i>
               <br />
               <br />
@@ -40,11 +39,11 @@ development, boasting proficiency in HTML, CSS, JavaScript, and React. </b>
               <br />
               <br />
               My expertise extends to crafting
-compelling user interfaces, leveraging advanced UI design tools such as  <b className="purple">Figma</b>.
+              compelling user interfaces, leveraging advanced UI design tools such as  <b className="purple">Figma</b>.
               <i>
                 <br/>
-              I am dedicated to continuous
-learning and have recently started working on a research project in.
+                I am dedicated to continuous
+                learning and have recently started working on a research project in.
               </i>
               &nbsp; like
               <i>
@@ -95,6 +94,24 @@ learning and have recently started working on a research project in.
                   <AiFillInstagram />
                 </a>
               </li>
+              <li className="social-icons">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100080181855908&mibextid=ZbWKwL"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <FaFacebook />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="mailto:oishyfatemaakhand@gmail.com"
+                  className="icon-colour home-social-icons"
+                >
+                  <FaEnvelope />
+                </a>
+              </li>
             </ul>
           </Col>
         </Row>
@@ -102,4 +119,5 @@ learning and have recently started working on a research project in.
     </Container>
   );
 }
+
 export default Home2;
