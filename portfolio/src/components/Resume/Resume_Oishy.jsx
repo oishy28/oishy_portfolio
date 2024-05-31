@@ -10,7 +10,7 @@ const Resume_Oishy = () => {
       
       <div className="header">
         <h1>Oishy Fatema Akhand</h1>
-        <p>+8801616662169</p>
+        <p>+8801$$$$$$$$$</p>
         <p>
           <a href="mailto:oishyfatema@iut-dhaka.edu">oishyfatema@iut-dhaka.edu</a>
           {' - '}
