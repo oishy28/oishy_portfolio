@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 
 const Resume_Oishy = () => {
   return (
+    <div><h2>Visual representation of the Resume</h2>
     <div className="resume">
+      
       <div className="header">
         <h1>Oishy Fatema Akhand</h1>
         <p>+8801616662169</p>
@@ -19,14 +21,17 @@ const Resume_Oishy = () => {
       </div>
 
       <div className="section">
-        <h2>About Me</h2>
+        <hr />
         <p>
           I’m currently enrolled in the Islamic University of Technology’s (IUT) undergraduate Software Engineering (SWE) program under Computer Science and Engineering (CSE) department. I specialize in Frontend development, boasting proficiency in HTML, CSS, JavaScript, and React. My expertise extends to crafting compelling user interfaces, leveraging advanced UI design tools such as Figma. I am dedicated to continuous learning and have recently started working on a research project in ML, NLP, and LLM.
         </p>
+        
       </div>
 
       <div className="section">
+        
         <h2>Education</h2>
+        <hr/>
         <div className="education">
           <div>
             <h3>Islamic University of Technology(IUT)</h3>
@@ -50,6 +55,7 @@ const Resume_Oishy = () => {
 
       <div className="section">
         <h2>Technical Skills</h2>
+        <hr/>
         <ul className="skills">
           <li>Frontend Technologies: HTML, CSS, React.js, Next.js</li>
           <li>Backend Technologies: Node.js, JavaScript</li>
@@ -63,6 +69,7 @@ const Resume_Oishy = () => {
 
       <div className="section">
         <h2>Experience</h2>
+        <hr/>
         <div className="experience">
           <div>
             <h3>IUT Computer Society(IUTCS) - Publications</h3>
@@ -78,6 +85,7 @@ const Resume_Oishy = () => {
       </div>
       <div className="section">
   <h2>Academic Projects</h2>
+  <hr/>
   <ul className="projects">
     {/* Project 1: Plasma Plus */}
     <li>
@@ -160,11 +168,13 @@ const Resume_Oishy = () => {
 
       <div className="section">
         <h2>Achievements and Certificates</h2>
+        <hr/>
         <ul className="achievements">
           <li>Co-winner of IUT Wall Calendar 2024 Design Competition</li>
           <li>Completed a course on Supervised Machine Learning: Regression and Classification from Stanford Online via Coursera.</li>
         </ul>
       </div>
+    </div>
     </div>
   );
 }
